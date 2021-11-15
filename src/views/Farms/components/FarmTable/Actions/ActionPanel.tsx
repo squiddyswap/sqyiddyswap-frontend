@@ -142,6 +142,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
   expanded,
 }) => {
   const farm = details
+
   const { account } = useWeb3React()
 
   const { t } = useTranslation()

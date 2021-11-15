@@ -61,6 +61,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, account, addLiquidi
         pid={pid}
         apr={farm.apr}
         lpLabel={lpLabel}
+        lpTotalSupply={farm.lpTotalSupply}
         cakePrice={cakePrice}
         addLiquidityUrl={addLiquidityUrl}
       />

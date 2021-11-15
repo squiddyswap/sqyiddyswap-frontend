@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 import { useWeb3React } from '@web3-react/core'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
-import { Button, Flex, Heading, IconButton, AddIcon, MinusIcon, useModal } from 'packages/uikit'
+import { Button, Flex, Heading, IconButton, AddIcon, MinusIcon, useModal, Text } from 'packages/uikit'
 import { useLocation } from 'react-router-dom'
 import Balance from 'components/Balance'
 import { useTranslation } from 'contexts/Localization'
@@ -25,6 +25,7 @@ interface FarmCardActionsProps {
   displayApr?: string
   addLiquidityUrl?: string
   cakePrice?: BigNumber
+  lpTotalSupply?: BigNumber
   lpLabel?: string
 }
 
@@ -46,6 +47,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   addLiquidityUrl,
   cakePrice,
   lpLabel,
+  lpTotalSupply,
 }) => {
   const { t } = useTranslation()
   const { onStake } = useStakeFarms(pid)
@@ -54,6 +56,10 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   const dispatch = useAppDispatch()
   const { account } = useWeb3React()
   const lpPrice = useLpTokenPrice(tokenName)
+
+  const lpPercent = lpTotalSupply.isZero()
+    ? 0
+    : stakedBalance.multipliedBy(new BigNumber(10000)).dividedBy(lpTotalSupply).toNumber() / 100
 
   const handleStake = async (amount: string) => {
     await onStake(amount)
@@ -132,6 +138,9 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
             unit=" USD"
             prefix="~"
           />
+        )}
+        {stakedBalance.gt(0) && lpPrice.gt(0) && (
+          <Text small>{lpPercent < 0.01 ? '>0.01' : lpPercent.toFixed(2)}% of total LP</Text>
         )}
       </Flex>
       {renderStakingButtons()}

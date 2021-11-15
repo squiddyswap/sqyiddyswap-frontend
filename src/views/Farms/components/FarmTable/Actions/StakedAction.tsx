@@ -44,6 +44,7 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
   token,
   userDataReady,
   displayApr,
+  lpTotalSupply,
 }) => {
   const { t } = useTranslation()
   const { account } = useWeb3React()
@@ -107,6 +108,10 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
   const dispatch = useAppDispatch()
   const { onApprove } = useApproveFarm(lpContract)
 
+  const lpPercent = lpTotalSupply.isZero()
+    ? 0
+    : stakedBalance.multipliedBy(new BigNumber(10000)).dividedBy(lpTotalSupply).toNumber() / 100
+
   const handleApprove = useCallback(async () => {
     try {
       setRequestedApproval(true)
@@ -158,6 +163,9 @@ const Staked: React.FunctionComponent<StackedActionProps> = ({
                   unit=" USD"
                   prefix="~"
                 />
+              )}
+              {stakedBalance.gt(0) && lpPrice.gt(0) && (
+                <Text small>{lpPercent < 0.01 ? '>0.01' : lpPercent.toFixed(2)}% of total LP</Text>
               )}
             </div>
             <IconButtonWrapper>
