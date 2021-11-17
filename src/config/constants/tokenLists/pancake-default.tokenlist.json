@@ -35,6 +35,14 @@
       "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0x09bce7716d46459df7473982fd27a96eabd6ee4d/logo.png?raw=true"
     },
     {
+      "name": "Velhalla",
+      "symbol": "SCAR",
+      "address": "0x8d9fb713587174ee97e91866050c383b5cee6209",
+      "chainId": 106,
+      "decimals": 18,
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0x8d9fb713587174ee97e91866050c383b5cee6209/logo.png?raw=true"
+    },
+    {
       "name": "Multichain ETH",
       "symbol": "ETH",
       "address": "0x85219708c49aa701871Ad330A94EA0f41dFf24Ca",
