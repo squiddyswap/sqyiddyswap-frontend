@@ -113,7 +113,10 @@ export const testnetTokens = {
 const tokens = (): TokenList => {
   // If testnet - return list comprised of testnetTokens wherever they exist, and mainnetTokens where they don't
   if (chainId === ChainId.TESTNET) {
-    return Object.keys(mainnetTokens).reduce((accum, key) => {
+    // return Object.keys(mainnetTokens).reduce((accum, key) => {
+    //   return { ...accum, [key]: testnetTokens[key] || mainnetTokens[key] }
+    // }, {})
+    return Object.keys(testnetTokens).reduce((accum, key) => {
       return { ...accum, [key]: testnetTokens[key] || mainnetTokens[key] }
     }, {})
   }
