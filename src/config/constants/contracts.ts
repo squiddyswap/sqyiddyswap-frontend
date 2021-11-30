@@ -11,7 +11,7 @@ export default {
   },
   lotteryV2: {
     111: '0x62871cf7b1d356f965734d7EBDEBADB482d7ee11',
-    106: '0xDf4dBf6536201370F95e06A0F8a7a70fE40E388a',
+    106: '0x52AE522D6Bde0a04f9D28c71797d5f7214176592',
   },
   multiCall: {
     106: addresses[106].Multicall2,
