@@ -7,34 +7,26 @@ interface BalanceProps extends TextProps {
   isDisabled?: boolean
 }
 
-const RemainingTime: React.FC<BalanceProps> = ({
-  value: targetTimeStamp,
-  color = 'text',
-  isDisabled = false,
-  ...props
-}) => {
-  const [secs, setSecs] = useState(0)
+const RemainingTime: React.FC<BalanceProps> = ({ value: duration, color = 'text', isDisabled = false, ...props }) => {
+  const [secs, setSecs] = useState(duration)
 
   useEffect(() => {
-    const setTime = () => {
-      const cur = Math.floor(Date.now() / 1000)
-      const diff = targetTimeStamp - cur
-
-      setSecs(() => (diff > 0 ? diff : 0))
-    }
-    setTime()
-    const interval = setInterval(setTime, 1000)
+    const interval = setInterval(() => {
+      setSecs((prev) => (prev === 0 ? 0 : prev - 1))
+    }, 1000)
     return () => {
       clearInterval(interval)
     }
-  }, [targetTimeStamp])
+  }, [])
+
+  if (secs === 0) return null
 
   const timeStr = (() => {
     let str = ''
     const sec = secs % 60
     str = `${sec}S`
 
-    const mins = Math.floor(sec / 60)
+    const mins = Math.floor(secs / 60)
 
     if (mins === 0) return str
 

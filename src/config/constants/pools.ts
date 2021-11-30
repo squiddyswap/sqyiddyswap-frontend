@@ -24,6 +24,20 @@ const pools: SerializedPoolConfig[] =
           sortOrder: 1,
           isFinished: false,
         },
+        {
+          sousId: 2,
+          stakingToken: serializedTokens.cake,
+          earningToken: serializedTokens.scar,
+          contractAddress: {
+            111: '',
+            106: '0x9907B73574245fF0e538C49088B522b5f004FDEf',
+          },
+          poolCategory: PoolCategory.CORE,
+          harvest: true,
+          tokenPerBlock: '0.064',
+          sortOrder: 2,
+          isFinished: false,
+        },
       ]
     : [
         {
