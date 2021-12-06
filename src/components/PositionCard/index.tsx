@@ -23,6 +23,12 @@ const FixedHeightRow = styled(RowBetween)`
   height: 24px;
 `
 
+const LogoWrapper = styled.img`
+  width: 16px;
+  height: 16px;
+  margin-bottom: -1px;
+`
+
 interface PositionCardProps extends CardProps {
   pair: Pair
   showUnwrapped?: boolean
@@ -61,7 +67,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false }: PositionCar
   return (
     <>
       {userPoolBalance && JSBI.greaterThan(userPoolBalance.raw, JSBI.BigInt(0)) ? (
-        <Card>
+        <Card style={{ zIndex: 2 }}>
           <CardBody>
             <AutoColumn gap="16px">
               <FixedHeightRow>
@@ -118,11 +124,9 @@ export function MinimalPositionCard({ pair, showUnwrapped = false }: PositionCar
           </CardBody>
         </Card>
       ) : (
-        <LightCard>
+        <LightCard style={{ zIndex: 2 }}>
           <Text fontSize="14px" style={{ textAlign: 'center' }}>
-            <span role="img" aria-label="pancake-icon">
-              🥞
-            </span>{' '}
+            <LogoWrapper alt="logo mobile" src="/images/logo.png" />
             {t(
               "By adding liquidity you'll earn 0.17% of all trades on this pair proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.",
             )}
