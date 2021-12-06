@@ -94,6 +94,16 @@ const farms: SerializedFarmConfig[] =
           token: serializedTokens.scar,
           quoteToken: serializedTokens.wvlx,
         },
+        {
+          pid: 10,
+          lpSymbol: 'ASTRO_WAG LP',
+          lpAddresses: {
+            111: '',
+            106: '0x40AC95e5855878e614f838ABf2b84853e84F188d',
+          },
+          token: serializedTokens.cake,
+          quoteToken: serializedTokens.astro,
+        },
       ]
     : [
         /**
