@@ -35,6 +35,14 @@
       "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0x09bce7716d46459df7473982fd27a96eabd6ee4d/logo.png?raw=true"
     },
     {
+      "name": "AstroSwap",
+      "symbol": "ASTRO",
+      "address": "0x72eb7ca07399ec402c5b7aa6a65752b6a1dc0c27",
+      "chainId": 106,
+      "decimals": 18,
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0x72eb7ca07399ec402c5b7aa6a65752b6a1dc0c27/logo.png?raw=true"
+    },
+    {
       "name": "Velhalla",
       "symbol": "SCAR",
       "address": "0x8d9fb713587174ee97e91866050c383b5cee6209",
