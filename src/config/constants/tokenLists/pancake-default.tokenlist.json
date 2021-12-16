@@ -51,6 +51,14 @@
       "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0x8d9fb713587174ee97e91866050c383b5cee6209/logo.png?raw=true"
     },
     {
+      "name": "SWAPZ.app",
+      "symbol": "SWAPZ",
+      "address": "0x9b6fbF0ea23faF0d77B94d5699B44062e5E747Ac",
+      "chainId": 106,
+      "decimals": 18,
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0x9b6fbF0ea23faF0d77B94d5699B44062e5E747Ac/logo.png?raw=true"
+    },
+    {
       "name": "Multichain ETH",
       "symbol": "ETH",
       "address": "0x85219708c49aa701871Ad330A94EA0f41dFf24Ca",
