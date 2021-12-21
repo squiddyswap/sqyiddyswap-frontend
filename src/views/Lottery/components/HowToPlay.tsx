@@ -343,7 +343,7 @@ const HowToPlay: React.FC = () => {
           </Heading>
           <Text>
             {t('Check our in-depth guide on')}{' '}
-            <InlineLink href="https://docs.pancakeswap.finance/products/lottery/lottery-guide">
+            <InlineLink href="https://docs.wagyuswap.app/wagyuswap/products/wagyuswap-lottery">
               {t('how to play the WagyuSwap lottery!')}
             </InlineLink>
           </Text>

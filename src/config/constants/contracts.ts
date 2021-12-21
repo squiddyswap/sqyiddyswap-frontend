@@ -10,8 +10,8 @@ export default {
     106: addresses[106].WAGStakingFactory,
   },
   lotteryV2: {
-    111: '0xe83377625149873b22cEa00B01c0019da1d92c0d',
-    106: '0x1511f59BbA5bc5F45C7FFC4aa39813175650d070',
+    111: '0x11FbA0b1ED82824b2bccC99a3098e6328ba4C610',
+    106: '0xCc98EA77643713A1bBe42C468e3D8263E635ed29',
   },
   multiCall: {
     106: addresses[106].Multicall2,
