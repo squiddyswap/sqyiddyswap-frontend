@@ -7,6 +7,8 @@ import { usePriceCakeBusd } from 'state/farms/hooks'
 import { useLottery } from 'state/lottery/hooks'
 import { getBalanceNumber } from 'utils/formatBalance'
 import Balance from 'components/Balance'
+import { useCakeBusdPrice } from 'hooks/useBUSDPrice'
+import BigNumber from 'bignumber.js'
 import { TicketPurchaseCard } from '../svgs'
 import BuyTicketsButton from './BuyTicketsButton'
 
@@ -219,8 +221,11 @@ const Hero = () => {
     isTransitioning,
   } = useLottery()
 
-  const cakePriceBusd = usePriceCakeBusd()
-  const prizeInBusd = amountCollectedInCake.times(cakePriceBusd)
+  const cakePriceBusd = useCakeBusdPrice()
+  const prizeInBusd = amountCollectedInCake.times(
+    cakePriceBusd ? new BigNumber(cakePriceBusd.toFixed(2)) : new BigNumber('0'),
+  )
+
   const prizeTotal = getBalanceNumber(prizeInBusd)
   const ticketBuyIsDisabled = status !== LotteryStatus.OPEN || isTransitioning
 
@@ -228,7 +233,7 @@ const Hero = () => {
     if (status === LotteryStatus.OPEN) {
       return (
         <>
-          {prizeInBusd.isNaN() ? (
+          {prizeInBusd.isNaN() || !cakePriceBusd ? (
             <Skeleton my="7px" height={60} width={190} />
           ) : (
             <PrizeTotalBalance fontSize="64px" bold prefix="$" value={prizeTotal} mb="8px" decimals={0} />
