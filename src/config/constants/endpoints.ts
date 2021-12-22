@@ -2,7 +2,6 @@ import { ChainId } from '@wagyu-swap/sdk'
 
 export const GRAPH_API_PROFILE = process.env.REACT_APP_GRAPH_API_PROFILE
 export const GRAPH_API_PREDICTION = process.env.REACT_APP_GRAPH_API_PREDICTION
-export const GRAPH_API_LOTTERY = process.env.REACT_APP_GRAPH_API_LOTTERY
 export const SNAPSHOT_VOTING_API = process.env.REACT_APP_SNAPSHOT_VOTING_API
 export const SNAPSHOT_BASE_URL = process.env.REACT_APP_SNAPSHOT_BASE_URL
 export const API_PROFILE = process.env.REACT_APP_API_PROFILE
@@ -37,3 +36,13 @@ export const BLOCKS_CLIENT = {
   [ChainId.TESTNET]: 'https://thegraph.testnet.wagyuswap.app/subgraphs/name/blocks',
   [ChainId.MAINNET]: 'https://thegraph.wagyuswap.app/subgraphs/name/blocks',
 }[chainId]
+
+export const GRAPH_API_LOTTERY = {
+  [ChainId.TESTNET]: 'https://thegraph.testnet.wagyuswap.app/subgraphs/name/lottery',
+  [ChainId.MAINNET]: 'https://thegraph.wagyuswap.app/subgraphs/name/lottery',
+}[chainId]
+
+// export const GRAPH_API_LOTTERY = {
+//   [ChainId.TESTNET]: 'http://164.90.190.145/subgraphs/name/lottery',
+//   [ChainId.MAINNET]: 'http://167.71.200.226/subgraphs/name/lottery',
+// }[chainId]

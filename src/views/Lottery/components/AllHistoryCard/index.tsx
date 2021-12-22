@@ -52,7 +52,6 @@ const AllHistoryCard = () => {
 
   useEffect(() => {
     setSelectedLotteryNodeData(null)
-
     const fetchLotteryData = async () => {
       const lotteryData = await fetchLottery(selectedRoundId)
       const processedLotteryData = processLotteryResponse(lotteryData)
