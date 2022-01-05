@@ -44,5 +44,5 @@ export const GRAPH_API_LOTTERY = {
 
 // export const GRAPH_API_LOTTERY = {
 //   [ChainId.TESTNET]: 'http://164.90.190.145/subgraphs/name/lottery',
-//   [ChainId.MAINNET]: 'http://167.71.200.226/subgraphs/name/lottery',
+//   [ChainId.MAINNET]: 'http://209.237.140.231:8000/subgraphs/name/lottery',
 // }[chainId]
