@@ -124,6 +124,16 @@ const farms: SerializedFarmConfig[] =
           token: serializedTokens.usdv,
           quoteToken: serializedTokens.cake,
         },
+        {
+          pid: 13,
+          lpSymbol: 'WAG_BUSD LP',
+          lpAddresses: {
+            111: '',
+            106: '0x339977398975dcD543f3873194B9238A96Ac79dE',
+          },
+          token: serializedTokens.busd,
+          quoteToken: serializedTokens.cake,
+        },
       ]
     : [
         /**
