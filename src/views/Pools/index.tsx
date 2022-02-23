@@ -264,7 +264,7 @@ const Pools: React.FC = () => {
               {t('Stake tokens to get')}
             </Heading>
             <Heading scale="md" color="text">
-              {t('mouthwatering APR, low risk.')}
+              {t('mouthwatering APR.')}
             </Heading>
           </Flex>
           <Flex flex="1" height="fit-content" justifyContent="center" alignItems="center" mt={['24px', null, '0']}>
