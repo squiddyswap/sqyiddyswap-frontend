@@ -107,6 +107,22 @@
       "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0xd12f7a98c0d740e7ec82e8caf94eb79c56d1b623/logo.png?raw=true"
     },
     {
+      "name": "Dai",
+      "symbol": "DAI",
+      "address": "0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d",
+      "chainId": 106,
+      "decimals": 18,
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d/logo.png?raw=true"
+    },
+    {
+      "name": "Wrapped Bitcoin",
+      "symbol": "WBTC",
+      "address": "0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c",
+      "chainId": 106,
+      "decimals": 8,
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c/logo.png?raw=true"
+    },
+    {
       "name": "Multichain ETH",
       "symbol": "ETH",
       "address": "0x3538C7f88aDbc8ad1F435f7EA70287e26b926344",
