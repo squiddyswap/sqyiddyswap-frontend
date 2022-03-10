@@ -154,6 +154,16 @@ const farms: SerializedFarmConfig[] =
           token: serializedTokens.usdv,
           quoteToken: serializedTokens.busd,
         },
+        {
+          pid: 16,
+          lpSymbol: 'WBTC_USDV LP',
+          lpAddresses: {
+            111: '',
+            106: '0x90724ea2D9D9decE420C9413850401DA9dccb514',
+          },
+          token: serializedTokens.usdv,
+          quoteToken: serializedTokens.wbtc,
+        },
       ]
     : [
         /**
