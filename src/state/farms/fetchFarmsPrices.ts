@@ -66,6 +66,9 @@ const getFarmQuoteTokenPrice = (
   if (farm.quoteToken.symbol === 'USDT') {
     return BIG_ONE
   }
+  if (farm.quoteToken.symbol === 'BUSD') {
+    return BIG_ONE
+  }
 
   if (farm.quoteToken.symbol === 'WVLX') {
     return bnbPriceBusd
@@ -83,13 +86,16 @@ const getFarmQuoteTokenPrice = (
     return quoteTokenFarm.tokenPriceVsQuote ? new BigNumber(quoteTokenFarm.tokenPriceVsQuote) : BIG_ZERO
   }
 
+  if (quoteTokenFarm.quoteToken.symbol === 'BUSD') {
+    return quoteTokenFarm.tokenPriceVsQuote ? new BigNumber(quoteTokenFarm.tokenPriceVsQuote) : BIG_ZERO
+  }
+
   return BIG_ZERO
 }
 
 const fetchFarmsPrices = async (farms: SerializedFarm[]) => {
   const bnbBusdFarm = farms.find((farm) => farm.pid === VLX_USDT_LP_PID)
   const bnbPriceBusd = bnbBusdFarm.tokenPriceVsQuote ? BIG_ONE.div(bnbBusdFarm.tokenPriceVsQuote) : BIG_ZERO
-
   const farmsWithPrices = farms.map((farm) => {
     const quoteTokenFarm = getFarmFromTokenSymbol(farms, farm.quoteToken.symbol)
     const tokenPriceUsdt = getFarmBaseTokenPrice(farm, quoteTokenFarm, bnbPriceBusd)
