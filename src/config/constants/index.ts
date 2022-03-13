@@ -17,6 +17,8 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     mainnetTokens.usdt,
     mainnetTokens.weth,
     mainnetTokens.usdc,
+    mainnetTokens.busd,
+    mainnetTokens.usdv,
   ],
   [ChainId.TESTNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.usdt],
 }
