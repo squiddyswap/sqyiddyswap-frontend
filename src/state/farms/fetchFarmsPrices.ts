@@ -26,6 +26,10 @@ const getFarmBaseTokenPrice = (
     return hasTokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : BIG_ZERO
   }
 
+  if (farm.quoteToken.symbol === tokens.busd.symbol) {
+    return hasTokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : BIG_ZERO
+  }
+
   if (farm.quoteToken.symbol === tokens.wvlx.symbol) {
     return hasTokenPriceVsQuote ? bnbPriceBusd.times(farm.tokenPriceVsQuote) : BIG_ZERO
   }
@@ -48,6 +52,13 @@ const getFarmBaseTokenPrice = (
   }
 
   if (quoteTokenFarm.quoteToken.symbol === tokens.usdt.symbol) {
+    const quoteTokenInBusd = quoteTokenFarm.tokenPriceVsQuote
+    return hasTokenPriceVsQuote && quoteTokenInBusd
+      ? new BigNumber(farm.tokenPriceVsQuote).times(quoteTokenInBusd)
+      : BIG_ZERO
+  }
+
+  if (quoteTokenFarm.quoteToken.symbol === tokens.busd.symbol) {
     const quoteTokenInBusd = quoteTokenFarm.tokenPriceVsQuote
     return hasTokenPriceVsQuote && quoteTokenInBusd
       ? new BigNumber(farm.tokenPriceVsQuote).times(quoteTokenInBusd)
