@@ -5,6 +5,10 @@ import { BIG_ZERO } from 'utils/bigNumber'
 import { PoolsState, SerializedPool, CakeVault, VaultFees, VaultUser, AppThunk } from 'state/types'
 import { getPoolApr } from 'utils/apr'
 import { getBalanceNumber } from 'utils/formatBalance'
+import farmsConfig from 'config/constants/farms'
+import priceHelperLpsConfig from 'config/constants/priceHelperLps'
+import fetchFarms from 'state/farms/fetchFarms'
+import fetchFarmsPrices from 'state/farms/fetchFarmsPrices'
 import { fetchPoolsBlockLimits, fetchPoolsStakingLimits, fetchPoolsTotalStaking } from './fetchPools'
 import {
   fetchPoolsAllowance,
@@ -46,7 +50,13 @@ export const fetchPoolsPublicDataAsync = (currentBlock: number) => async (dispat
   const blockLimits = await fetchPoolsBlockLimits()
   const totalStakings = await fetchPoolsTotalStaking()
 
-  const prices = getTokenPricesFromFarm(getState().farms.data)
+  const farmsWithPriceHelpers = farmsConfig.concat(priceHelperLpsConfig)
+
+  const farms = await fetchFarms(farmsWithPriceHelpers)
+
+  const farmsWithPrices = await fetchFarmsPrices(farms)
+
+  const prices = getTokenPricesFromFarm(farmsWithPrices)
 
   const liveData = poolsConfig.map((pool) => {
     const blockLimit = blockLimits.find((entry) => entry.sousId === pool.sousId)
