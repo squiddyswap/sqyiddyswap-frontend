@@ -19,6 +19,14 @@
       "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0xabf26902fd7b624e0db40d31171ea9dddf078351/logo.png?raw=true"
     },
     {
+      "name": "Wrapped VLX",
+      "symbol": "WVLX",
+      "address": "0xc579d1f3cf86749e05cd06f7ade17856c2ce3126",
+      "chainId": 106,
+      "decimals": 18,
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0xc579d1f3cf86749e05cd06f7ade17856c2ce3126/logo.png?raw=true"
+    },
+    {
       "name": "Velas Pad",
       "symbol": "VLXPAD",
       "address": "0xa065e0858417dfc7abc6f2bd4d0185332475c180",
