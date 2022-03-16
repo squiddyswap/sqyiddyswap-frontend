@@ -108,20 +108,6 @@ const pools: SerializedPoolConfig[] =
           sortOrder: 6,
           isFinished: false,
         },
-        {
-          sousId: 8,
-          stakingToken: serializedTokens.cake,
-          earningToken: serializedTokens.vlxpad,
-          contractAddress: {
-            111: '',
-            106: '0x2ABe5242d36E3A0f643EF4748d35Bd8B7FC56C5d',
-          },
-          poolCategory: PoolCategory.CORE,
-          harvest: true,
-          tokenPerBlock: '0.0629',
-          sortOrder: 7,
-          isFinished: false,
-        },
       ]
     : [
         {
