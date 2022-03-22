@@ -97,7 +97,7 @@ const pools: SerializedPoolConfig[] =
         {
           sousId: 7,
           stakingToken: serializedTokens.cake,
-          earningToken: serializedTokens.vlx,
+          earningToken: serializedTokens.wvlx,
           contractAddress: {
             111: '',
             106: '0xe68a572CEc1C021d8a13DbDd0bDBCFEdc8F1901f',
