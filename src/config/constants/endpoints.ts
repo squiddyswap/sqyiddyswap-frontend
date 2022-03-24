@@ -34,7 +34,7 @@ export const INFO_CLIENT = {
 
 export const BLOCKS_CLIENT = {
   [ChainId.TESTNET]: 'https://thegraph.testnet.wagyuswap.app/subgraphs/name/blocks',
-  [ChainId.MAINNET]: 'https://thegraph.wagyuswap.app/subgraphs/name/blocks',
+  [ChainId.MAINNET]: 'https://thegraph1.wagyuswap.app/subgraphs/name/wagyu',
 }[chainId]
 
 export const GRAPH_API_LOTTERY = {
