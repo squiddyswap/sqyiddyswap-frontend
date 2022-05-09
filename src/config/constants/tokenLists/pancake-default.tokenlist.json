@@ -51,6 +51,30 @@
       "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0x72eb7ca07399ec402c5b7aa6a65752b6a1dc0c27/logo.png?raw=true"
     },
     {
+      "name": "Polygon",
+      "symbol": "MATIC",
+      "address": "0x6ab0b8c1a35f9f4ce107ccbd05049cb1dbd99ec5",
+      "chainId": 106,
+      "decimals": 18,
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0x6ab0b8c1a35f9f4ce107ccbd05049cb1dbd99ec5/logo.png?raw=true"
+    },
+    {
+      "name": "Fantom",
+      "symbol": "FTM",
+      "address": "0xc9b3aa6e91d70f4ca0988d643ca2bb93851f3de4",
+      "chainId": 106,
+      "decimals": 18,
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0xc9b3aa6e91d70f4ca0988d643ca2bb93851f3de4/logo.png?raw=true"
+    },
+    {
+      "name": "Avalanche",
+      "symbol": "AVAX",
+      "address": "0x525bd1f949ffa2a0c5820f3b6fe61bb897466ff7",
+      "chainId": 106,
+      "decimals": 18,
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0x525bd1f949ffa2a0c5820f3b6fe61bb897466ff7/logo.png?raw=true"
+    },
+    {
       "name": "Velhalla",
       "symbol": "SCAR",
       "address": "0x8d9fb713587174ee97e91866050c383b5cee6209",
