@@ -174,6 +174,16 @@ const farms: SerializedFarmConfig[] =
           token: serializedTokens.dai,
           quoteToken: serializedTokens.usdv,
         },
+        {
+          pid: 18,
+          lpSymbol: 'AVAX_WAG LP',
+          lpAddresses: {
+            111: '',
+            106: '0xF20C64b3c070688dCB39ECb28e69FC13e2E4D37c',
+          },
+          token: serializedTokens.avax,
+          quoteToken: serializedTokens.cake,
+        },
       ]
     : [
         /**
