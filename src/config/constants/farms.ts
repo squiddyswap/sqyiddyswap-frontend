@@ -184,6 +184,16 @@ const farms: SerializedFarmConfig[] =
           token: serializedTokens.avax,
           quoteToken: serializedTokens.cake,
         },
+        {
+          pid: 19,
+          lpSymbol: 'MATIC_WAG LP',
+          lpAddresses: {
+            111: '',
+            106: '0xdbbCBf9FbFe8E2FCd80E30894c9320e995e77b97',
+          },
+          token: serializedTokens.matic,
+          quoteToken: serializedTokens.cake,
+        },
       ]
     : [
         /**
