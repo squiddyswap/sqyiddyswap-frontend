@@ -194,6 +194,16 @@ const farms: SerializedFarmConfig[] =
           token: serializedTokens.matic,
           quoteToken: serializedTokens.cake,
         },
+        {
+          pid: 20,
+          lpSymbol: 'BNB_WAG LP',
+          lpAddresses: {
+            111: '',
+            106: '0x133F317F41f8b4d749A0a559761681767aF69a27',
+          },
+          token: serializedTokens.bnb,
+          quoteToken: serializedTokens.cake,
+        },
       ]
     : [
         /**
