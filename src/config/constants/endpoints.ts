@@ -34,12 +34,12 @@ export const INFO_CLIENT = {
 
 export const BLOCKS_CLIENT = {
   [ChainId.TESTNET]: 'https://thegraph.testnet.wagyuswap.app/subgraphs/name/blocks',
-  [ChainId.MAINNET]: 'https://thegraph1.wagyuswap.app/subgraphs/name/wagyu',
+  [ChainId.MAINNET]: 'https://thegraph.wagyuswap.app/subgraphs/name/wagyu',
 }[chainId]
 
 export const GRAPH_API_LOTTERY = {
   [ChainId.TESTNET]: 'https://thegraph.testnet.wagyuswap.app/subgraphs/name/lottery',
-  [ChainId.MAINNET]: 'https://thegraph2.wagyuswap.app/subgraphs/name/lottery',
+  [ChainId.MAINNET]: 'https://thegraph1.wagyuswap.app/subgraphs/name/lottery',
 }[chainId]
 
 // export const GRAPH_API_LOTTERY = {
