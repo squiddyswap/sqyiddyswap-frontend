@@ -102,6 +102,8 @@ const Overview: React.FC = () => {
     return Object.values(allPoolData).some((pool) => !pool.data)
   }, [allPoolData])
 
+  console.log(formattedLiquidityData)
+
   return (
     <Page>
       <Heading scale="lg" mb="16px" id="info-overview-title">
