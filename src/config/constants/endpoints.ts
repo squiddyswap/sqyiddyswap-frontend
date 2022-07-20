@@ -19,17 +19,17 @@ export const GRAPH_API_PREDICTION_V1 = 'https://api.thegraph.com/subgraphs/name/
 // https://thegraph.testnet.wagyuswap.app/subgraphs/name/wagyu/graphql
 // export const INFO_CLIENT = {
 //   [ChainId.TESTNET]: 'http://164.90.190.145/subgraphs/name/wagyu',
-//   [ChainId.MAINNET]: 'http://51.222.43.201:8000/subgraphs/name/wagyu',
+//   [ChainId.MAINNET]: 'http://209.237.140.231/subgraphs/name/wagyu',
 // }[chainId]
 
 export const INFO_CLIENT = {
   [ChainId.TESTNET]: 'https://thegraph.testnet.wagyuswap.app/subgraphs/name/wagyu',
-  [ChainId.MAINNET]: 'https://thegraph.wagyuswap.app/subgraphs/name/wagyu',
+  [ChainId.MAINNET]: 'https://thegraph2.wagyuswap.app/subgraphs/name/wagyu',
 }[chainId]
 
 // export const BLOCKS_CLIENT = {
 //   [ChainId.TESTNET]: 'http://164.90.190.145/subgraphs/name/blocks',
-//   [ChainId.MAINNET]: 'http://51.222.43.201:8000/subgraphs/name/wagyu',
+//   [ChainId.MAINNET]: 'http://135.125.6.89/subgraphs/name/wagyu',
 // }[chainId]
 
 export const BLOCKS_CLIENT = {
