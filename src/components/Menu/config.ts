@@ -115,6 +115,10 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
         label: t('Support'),
         href: 'mailto:support@wagyuswap.app',
       },
+      {
+        label: t('Telegram'),
+        href: 'http://t.me/wagyuswapofficial',
+      },
       // {
       //   label: t('Merch'),
       //   href: 'https://pancakeswap.creator-spring.com/',
