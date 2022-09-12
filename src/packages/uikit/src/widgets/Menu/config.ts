@@ -46,11 +46,11 @@ export const links = [
     icon: 'PoolIcon',
     href: '/syrup',
   },
-  {
-    label: 'Lottery',
-    icon: 'TicketIcon',
-    href: '/lottery',
-  },
+  // {
+  //   label: 'Lottery',
+  //   icon: 'TicketIcon',
+  //   href: '/lottery',
+  // },
   {
     label: 'NFT',
     icon: 'NftIcon',
