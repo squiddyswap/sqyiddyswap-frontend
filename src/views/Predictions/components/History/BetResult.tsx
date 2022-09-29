@@ -129,7 +129,7 @@ const BetResult: React.FC<BetResultProps> = ({ bet, result }) => {
         {bet.claimed && bet.claimedHash && (
           <Flex justifyContent="center">
             <LinkExternal href={getVelasScanLink(bet.claimedHash, 'transaction')} mb="16px">
-              {t('View on Velas Explorer')}
+              {t('View on Velascan')}
             </LinkExternal>
           </Flex>
         )}
