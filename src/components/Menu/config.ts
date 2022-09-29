@@ -1,5 +1,6 @@
 import { MenuEntry } from 'packages/uikit'
 import { ContextApi } from 'contexts/Localization/types'
+import { BASE_BSC_SCAN_URL } from 'config'
 
 const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
   // {
@@ -118,6 +119,10 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
       {
         label: t('Telegram'),
         href: 'http://t.me/wagyuswapofficial',
+      },
+      {
+        label: t('Velascan'),
+        href: BASE_BSC_SCAN_URL,
       },
       // {
       //   label: t('Merch'),
